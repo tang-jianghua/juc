@@ -1,6 +1,7 @@
 package com.tangjianghua.juc.class001;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
 
 /**
  * Thread的几种常用方法
@@ -69,13 +70,7 @@ public class CommonMethods {
         thread.start();
         new Thread(()->{
             try {
-                TimeUnit.SECONDS.sleep(3L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println(thread.getState());
-            try {
-                TimeUnit.SECONDS.sleep(10L);
+                TimeUnit.SECONDS.sleep(1L);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
