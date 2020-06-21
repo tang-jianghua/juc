@@ -2,6 +2,7 @@ package com.tangjianghua.juc.class001;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Thread的几种常用方法
