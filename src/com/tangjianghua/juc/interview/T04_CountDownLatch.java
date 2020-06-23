@@ -1,18 +1,18 @@
 /**
- * Ôø¾­µÄÃæÊÔÌâ£º£¨ÌÔ±¦£¿£©
- * ÊµÏÖÒ»¸öÈÝÆ÷£¬Ìá¹©Á½¸ö·½·¨£¬add£¬size
- * Ð´Á½¸öÏß³Ì£¬Ïß³Ì1Ìí¼Ó10¸öÔªËØµ½ÈÝÆ÷ÖÐ£¬Ïß³Ì2ÊµÏÖ¼à¿ØÔªËØµÄ¸öÊý£¬µ±¸öÊýµ½5¸öÊ±£¬Ïß³Ì2¸ø³öÌáÊ¾²¢½áÊø
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£ºï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½
+ * Êµï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½addï¿½ï¿½size
+ * Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì£ï¿½ï¿½ß³ï¿½1ï¿½ï¿½ï¿½10ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ß³ï¿½2Êµï¿½Ö¼ï¿½ï¿½Ôªï¿½ØµÄ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ß³ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * <p>
- * ·ÖÎöÏÂÃæÕâ¸ö³ÌÐò£¬ÄÜÍê³ÉÕâ¸ö¹¦ÄÜÂð£¿
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *
  * @author mashibing
  */
 package com.tangjianghua.juc.interview;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 
 public class T04_CountDownLatch {
@@ -34,14 +34,14 @@ public class T04_CountDownLatch {
 
 
         new Thread(() -> {
-            System.out.println("t2 ¿ªÊ¼");
-			try {
-				countDownLatch.await();
-			} catch (InterruptedException interruptedException) {
-				interruptedException.printStackTrace();
-			}
-			if (c.size() == 5) {
-                System.out.println("t2 ½áÊø");
+            System.out.println("t2 ");
+            try {
+                countDownLatch.await();
+            } catch (InterruptedException interruptedException) {
+                interruptedException.printStackTrace();
+            }
+            if (c.size() == 5) {
+                System.out.println("t2 ");
             }
         }, "t2").start();
         new Thread(() -> {
@@ -54,6 +54,5 @@ public class T04_CountDownLatch {
                 }
             }
         }, "t1").start();
-
     }
 }

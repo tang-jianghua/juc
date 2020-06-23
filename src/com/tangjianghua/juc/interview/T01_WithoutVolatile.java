@@ -1,9 +1,9 @@
 /**
- * Ôø¾­µÄÃæÊÔÌâ£º£¨ÌÔ±¦£¿£©
- * ÊµÏÖÒ»¸öÈİÆ÷£¬Ìá¹©Á½¸ö·½·¨£¬add£¬size
- * Ğ´Á½¸öÏß³Ì£¬Ïß³Ì1Ìí¼Ó10¸öÔªËØµ½ÈİÆ÷ÖĞ£¬Ïß³Ì2ÊµÏÖ¼à¿ØÔªËØµÄ¸öÊı£¬µ±¸öÊıµ½5¸öÊ±£¬Ïß³Ì2¸ø³öÌáÊ¾²¢½áÊø
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£ºï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½
+ * Êµï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½addï¿½ï¿½size
+ * Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì£ï¿½ï¿½ß³ï¿½1ï¿½ï¿½ï¿½10ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ£ï¿½ï¿½ß³ï¿½2Êµï¿½Ö¼ï¿½ï¿½Ôªï¿½ØµÄ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ß³ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
- * ·ÖÎöÏÂÃæÕâ¸ö³ÌĞò£¬ÄÜÍê³ÉÕâ¸ö¹¦ÄÜÂğ£¿
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author mashibing
  */
 package com.tangjianghua.juc.interview;
@@ -24,7 +24,7 @@ public class T01_WithoutVolatile {
 	public int size() {
 		return lists.size();
 	}
-	
+
 	public static void main(String[] args) {
 		T01_WithoutVolatile c = new T01_WithoutVolatile();
 
@@ -32,7 +32,7 @@ public class T01_WithoutVolatile {
 			for(int i=0; i<10; i++) {
 				c.add(new Object());
 				System.out.println("add " + i);
-				
+
 				try {
 					TimeUnit.SECONDS.sleep(1);
 				} catch (InterruptedException e) {
@@ -40,14 +40,14 @@ public class T01_WithoutVolatile {
 				}
 			}
 		}, "t1").start();
-		
+
 		new Thread(() -> {
 			while(true) {
 				if(c.size() == 5) {
 					break;
 				}
 			}
-			System.out.println("t2 ½áÊø");
+			System.out.println("t2 ");
 		}, "t2").start();
 	}
 }
