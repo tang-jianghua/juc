@@ -35,8 +35,5 @@ public class ReentrantLockTest {
 
         System.out.println(Thread.currentThread().getName()+"尝试获取锁："+reentrantLock.tryLock());
 
-
-        final Condition condition = reentrantLock.newCondition();
-
     }
 }

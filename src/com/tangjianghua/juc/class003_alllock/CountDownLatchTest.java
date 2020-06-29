@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * CountDownLatch：门闩,倒计时解锁
- * await()阻塞当前线程，知道CountDownLatch减到0
+ * await()阻塞当前线程，直到CountDownLatch减到0
  * @author tangjianghua
  * date 2020/6/23
  * time 11:50
