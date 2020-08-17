@@ -11,7 +11,7 @@ import java.util.concurrent.Semaphore;
 public class SemaphoreTest {
 
     public static void main(String[] args) {
-        //创建一个Semaphore，指定并发量为2，公平竞争
+        /*//创建一个Semaphore，指定并发量为2，公平竞争
         final Semaphore semaphore = new Semaphore(2, true);
         for (int i = 0; i < 10; i++) {
             new Thread(()->{
@@ -24,6 +24,15 @@ public class SemaphoreTest {
                     semaphore.release();
                 }
             }).start();
-        }
+        }*/
+
+        Semaphore semaphore1 = new Semaphore(0);
+        System.out.println(semaphore1.availablePermits());
+        semaphore1.release();
+        System.out.println(semaphore1.availablePermits());
+        semaphore1.release();
+        System.out.println(semaphore1.availablePermits());
+        semaphore1.release();
+        System.out.println(semaphore1.availablePermits());
     }
 }
