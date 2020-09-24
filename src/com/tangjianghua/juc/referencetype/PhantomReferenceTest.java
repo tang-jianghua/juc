@@ -28,6 +28,8 @@ public class PhantomReferenceTest {
             Reference<? extends M> poll = referenceQueue.poll();
             if (poll != null) {
                 System.out.println(poll);
+                M m = poll.get();
+                System.out.println(m);
             }
         }
     }

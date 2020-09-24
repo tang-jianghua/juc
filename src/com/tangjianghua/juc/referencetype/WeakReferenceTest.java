@@ -12,7 +12,11 @@ import java.util.concurrent.TimeUnit;
 public class WeakReferenceTest {
 
     public static void main(String[] args) {
-        WeakReference<byte[]> weakReference = new WeakReference<>(new byte[1024 * 1024 * 10]);
+
+        //如果在对象上不仅有弱引用还有强引用，那么弱引用在gc后不会失效。
+        byte[] bytes = new byte[1024 * 1024 * 10];
+        WeakReference<byte[]> weakReference = new WeakReference<>(bytes);
+        //WeakReference<byte[]> weakReference = new WeakReference<>(new byte[1024 * 1024 * 10]);
         System.out.println(weakReference.get());
         System.gc();
         try {
