@@ -11,8 +11,8 @@ import java.util.concurrent.Semaphore;
 public class SemaphoreTest {
 
     public static void main(String[] args) {
-        /*//创建一个Semaphore，指定并发量为2，公平竞争
-        final Semaphore semaphore = new Semaphore(2, true);
+        //创建一个Semaphore，指定并发量为2，公平竞争
+       /* final Semaphore semaphore = new Semaphore(2, true);
         for (int i = 0; i < 10; i++) {
             new Thread(()->{
                 try {
